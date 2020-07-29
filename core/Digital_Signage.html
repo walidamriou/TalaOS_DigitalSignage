@@ -18,29 +18,29 @@
     }
   </style>
 
-  <script>
-    let image_number=5 
-    let transitions_speed=1000 //ms
-    function TalaOS_DS_Images(image) {
-        document.getElementById("img").src=image
-    }
-    for (let index = 1; index < image_number; index++) {
-        TalaOS_DS_Images("resources/"+index+".png")
-        delay(transitions_speed)
-    }
 
-  </script>
 </head>
 
 <body>
   <div>
     <center>
-    <img id="" src="default.jpg">
+    <img id="talaos_screen" src="">
     </center>
   </div>
 
   <script src="./renderer.js"></script>
 
+  <script>
+    let image_number=9 
+    let transitions_speed=10000 //ms
+    function TalaOS_DS_Images(image) {
+        document.getElementById("talaos_screen").src = image
+    }
+    for (let index = 1; index < image_number; index++) {
+        setTimeout(() => { TalaOS_DS_Images("resources/"+index+".png") }, transitions_speed)
+    }
+
+  </script>
 </body>
 
 </html>
