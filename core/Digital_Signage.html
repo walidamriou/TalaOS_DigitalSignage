@@ -22,22 +22,45 @@
 </head>
 
 <body>
-  <div>
     <center>
-    <img id="talaos_screen" src="">
-    </center>
+
+  <div id="screen">
+
+
+
   </div>
+</center>
 
   <script src="./renderer.js"></script>
 
   <script>
+    let transitions_speed=2000 //ms
     let image_number=9 
-    let transitions_speed=10000 //ms
-    function TalaOS_DS_Images(image) {
-        document.getElementById("talaos_screen").src = image
+    
+    // create images
+    for (let index = 1; index < image_number+1; index++) {
+        let img=document.createElement("img")
+        img.src="resources/"+index+".png"
+        img.className="talaos_ds_image"
+        let screen = document.getElementById("screen");
+        screen.appendChild(img)   
     }
-    for (let index = 1; index < image_number; index++) {
-        setTimeout(() => { TalaOS_DS_Images("resources/"+index+".png") }, transitions_speed)
+    
+    //images loop function
+    var slideIndex = 0
+    talaos_ds_display_images_loop()
+
+    function talaos_ds_display_images_loop() {
+       let talaos_ds_image = document.getElementsByClassName("talaos_ds_image")
+       for (let i = 0; i < image_number; i++) {
+        talaos_ds_image[i].style.display = "none"
+       }
+       slideIndex++
+       if (slideIndex > image_number) {
+           slideIndex = 1
+        }
+        talaos_ds_image[slideIndex-1].style.display = "block"
+       setTimeout(talaos_ds_display_images_loop, transitions_speed) // Change image every transitions_speed ms
     }
 
   </script>
