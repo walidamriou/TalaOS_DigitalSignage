@@ -18,7 +18,7 @@ let image_number = 9
 // create images
 for (let index = 1; index < image_number + 1; index++) {
     let img = document.createElement("img")
-    img.src = "resources/" + index + ".png"
+    img.src = "../talaos_ds_data/resources/" + index + ".png"
     img.className = "talaos_ds_image"
     img.style.cssText = 'width:100%;height:100%'
 
