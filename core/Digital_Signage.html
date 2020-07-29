@@ -2,21 +2,21 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta charset="utf-8" />
-  <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-  <meta name="description" content="Tala OS is open-source operating system for Makers">
-  <meta property="og:description" content="Tala OS is open-source operating system for Makers" />
-  <meta name="author" content="Walid Amriou" />
-  
-  <title>TalaOS</title>
-  <style>
-    body{
-      background-color:#000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <meta name="description" content="Tala OS is open-source operating system for Makers">
+    <meta property="og:description" content="Tala OS is open-source operating system for Makers" />
+    <meta name="author" content="Walid Amriou" />
+
+    <title>TalaOS</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+    </style>
 
 
 </head>
@@ -24,46 +24,47 @@
 <body>
     <center>
 
-  <div id="screen">
+        <div id="screen">
 
 
 
-  </div>
-</center>
+        </div>
+    </center>
 
-  <script src="./renderer.js"></script>
+    <script src="./renderer.js"></script>
 
-  <script>
-    let transitions_speed=2000 //ms
-    let image_number=9 
-    
-    // create images
-    for (let index = 1; index < image_number+1; index++) {
-        let img=document.createElement("img")
-        img.src="resources/"+index+".png"
-        img.className="talaos_ds_image"
-        let screen = document.getElementById("screen");
-        screen.appendChild(img)   
-    }
-    
-    //images loop function
-    var slideIndex = 0
-    talaos_ds_display_images_loop()
+    <script>
+        let transitions_speed = 2000 //ms
+        let image_number = 9
 
-    function talaos_ds_display_images_loop() {
-       let talaos_ds_image = document.getElementsByClassName("talaos_ds_image")
-       for (let i = 0; i < image_number; i++) {
-        talaos_ds_image[i].style.display = "none"
-       }
-       slideIndex++
-       if (slideIndex > image_number) {
-           slideIndex = 1
+        // create images
+        for (let index = 1; index < image_number + 1; index++) {
+            let img = document.createElement("img")
+            img.src = "resources/" + index + ".png"
+            img.className = "talaos_ds_image"
+            img.style.cssText = 'width:100%;height:100%'
+
+            let screen = document.getElementById("screen");
+            screen.appendChild(img)
         }
-        talaos_ds_image[slideIndex-1].style.display = "block"
-       setTimeout(talaos_ds_display_images_loop, transitions_speed) // Change image every transitions_speed ms
-    }
 
-  </script>
+        //images loop function
+        var images_index = 0
+        talaos_ds_display_images_loop()
+
+        function talaos_ds_display_images_loop() {
+            let talaos_ds_image = document.getElementsByClassName("talaos_ds_image")
+            for (let index = 0; index < image_number; index++) {
+                talaos_ds_image[index].style.display = "none"
+            }
+            images_index++
+            if (images_index > image_number) {
+                images_index = 1
+            }
+            talaos_ds_image[images_index - 1].style.display = "block"
+            setTimeout(talaos_ds_display_images_loop, transitions_speed) // Change image every transitions_speed ms
+        }
+    </script>
 </body>
 
 </html>
