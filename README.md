@@ -4,6 +4,7 @@ TalaOS Core For Digital Signage
 ### Project folders
 * __/core__ The heart of TalaOS for Digital Signage
 * __/talaos_ds_data__ Contain the confige file and The data (images, video ..) that you want to display
+* __/console__ Contain sourcecode of "TalaOS Digital Signage Console" software
 
 ### Version 
 * 1.0.0
