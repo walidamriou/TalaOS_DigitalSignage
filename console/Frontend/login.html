@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>TalaOS Digital Signage console</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Beetrave server is A software distribution made to help build IoT servers which you can use locally or host in a cloud    ">
+  <meta name="author" content="WalidAmriou">
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_buttons.css">
+  <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="material_design/material.min.css">
+  
+
+  <script src="material_design/material.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+
+  <style>
+    body,h1,h2,h3,h4,h5,h6,p,a {
+      font-family: monospace, sans-serif
+    }
+
+    body,
+    html {
+      color: #212121;
+      background-color: #FAFAFA
+    }
+    @media (min-width:600px){
+      .mdl-list {
+        padding-left: 30%;
+      }
+    }
+
+    @media (max-width:700px){
+      .mdl-list {
+        padding-left: 10%;
+      }
+    }
+
+    .bgimg {
+      background-image: url('img/matrix.svg');
+      min-height: 100%;
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    mark {
+      background-color: #94ebee;
+      color: black;
+    }
+
+    #your_new_password_text {
+      color: red;
+    }
+    .mdl-ceckbox{
+      width: 10%;
+    }
+    .mdl-list__item{
+      min-height:65px;
+    }
+  </style>
+</head>
+
+<body style="color: #212121;">
+  
+  <div class="devfast-display-container devfast-animate-opacity devfast-text-white">
+    <div class="devfast-display-topleft devfast-padding-large devfast-xlarge" style="margin: 10px">
+    </div>
+
+    <div class="devfast-display-topright devfast-padding-large devfast-xlarge" style="margin: 10px">
+    </div>
+
+    <br>
+    <center>
+      <div class="devfast-display-middle">
+        <h5 class="devfast-jumbo devfast-animate-top"></h5>
+        <h4 stylecolor="#212121">
+          Login to <br><b>TalaOS Digital Signage</b> console</h4>
+          
+        </b>
+        </b>
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Username...</label>
+          </div>
+          <br>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="password" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Password...</label>
+          </div>
+          <br>
+          <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          style="border-radius:13px;background-color:#2F7CF8"
+          onclick=" window.open('/home','_blank')"
+          >
+          Login
+          </button>
+        </form>
+        <br>
+
+        <img src="img/anim.png" alt="GDG" style="max-width: 50%;">
+      </div>
+    </center>
+    <div class=" devfast-display-bottomleft devfast-padding-large">
+      </div>
+  </div>
+
+
+</body>
