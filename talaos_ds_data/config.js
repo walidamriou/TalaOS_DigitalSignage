@@ -13,8 +13,8 @@ Last update: July 2020
 */
 
 var config_valures = {
-    "screen_size_width_valure"  : 1366,
-    "screen_size_height_valure": 768,
+    "screen_size_width_valure"  : 1346,
+    "screen_size_height_valure": 748,
     "transitions_speed_valure": 1000,
     "images_type_valure": "png",
     "images_number_valure": 9
