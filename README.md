@@ -1,6 +1,19 @@
 # TalaOS Digital Signage
 TalaOS Core For Digital Signage
 
+### Project folders
+* __/core__ The heart of TalaOS for Digital Signage
+* __/talaos_ds_data__ Contain the confige file and The data (images, video ..) that you want to display
+* __/console__ Contain sourcecode of "TalaOS Digital Signage Console" server
+
+### Version 
+* 1.0.0
+  * support Raspberry pi boards only
+  * Support config Digital Signage from SD card in Raspberry pi
+  * Support Images content only
+  * "TalaOS Digital Signage Console"  to upload and config the images from other devices. 
+  * Documentation to help use it
+  
 ### Website
 https://talaos.walidamriou.com
 
