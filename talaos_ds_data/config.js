@@ -12,7 +12,14 @@ Last update: July 2020
 
 */
 
-var screen_size;
-var transitions_speed;
-var images_type;
-var images_number;
+var config_valures = {
+    "screen_size_width_valure"  : 1366,
+    "screen_size_height_valure": 768,
+    "transitions_speed_valure": 1000,
+    "images_type_valure": "png",
+    "images_number_valure": 9
+  
+  };
+
+
+
