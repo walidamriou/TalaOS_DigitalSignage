@@ -47,7 +47,8 @@ xset -dpms
 setxkbmap -option terminate:ctrl_alt_bksp
 
 # Start ElectronJS in kiosk mode
-
+cd TalaOS_DigitalSignage/core
+npm start
 ```
 
 
