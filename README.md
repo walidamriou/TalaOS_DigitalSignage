@@ -8,12 +8,49 @@ TalaOS Core For Digital Signage
 
 ### Version 
 * 1.0.0
-  * support Raspberry pi boards only
-  * Support config Digital Signage from SD card in Raspberry pi
-  * Support Images content only
+  * support Raspberry pi boards only.
+  * Support config Digital Signage from SD card in Raspberry pi.
+  * Support Images content only.
   * "TalaOS Digital Signage Console"  to upload and config the images from other devices. 
-  * Documentation to help use it
+  * Documentation to help use it.
   
+### Development 
+#### Raspberry pi
+1- download and flash raspbian lite 
+2- use raspi-config to enable ssh
+3- use ssh from your host computer to control your target raspberry pi 
+4- Update:
+```bash 
+sudo apt-get update
+sudo apt-get upgrade
+```
+5- Usually the graphical environment for GNU/Linux consists of four parts: X server (usually X.Org) , Window manager (Openbox, XFWM, …) , Desktop environment (PIXEL, LXDE, MATE, …), and Login manager (for example LightDM). However, we only want to run a single application build by ElectronJS in full screen, so __we don’t need a desktop environment__. And we already have autologin enabled because no other users will ever use the Pi), so __we don’t need a login manager__ either. The bare minimum we need are X server and window manager. Let’s install just that:
+```bash 
+sudo apt-get install --no-install-recommends xserver-xorg x11-xserver-utils xinit openbox
+```
+6- We need to install Chromium because it has files that electronJS application will use it:
+```bash 
+sudo apt-get install --no-install-recommends chromium-browser
+```
+7- we need to configure Openbox 
+```bash 
+sudo nano /etc/xdg/openbox/autostart 
+```
+and put inside it: 
+```bash 
+# Disable any form of screen saver / screen blanking / power management
+xset s off
+xset s noblank
+xset -dpms
+
+# Allow quitting the X server with CTRL-ATL-Backspace
+setxkbmap -option terminate:ctrl_alt_bksp
+
+# Start ElectronJS in kiosk mode
+
+```
+
+
 ### Website
 https://talaos.walidamriou.com
 
