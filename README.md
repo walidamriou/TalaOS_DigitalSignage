@@ -50,7 +50,10 @@ setxkbmap -option terminate:ctrl_alt_bksp
 cd TalaOS_DigitalSignage/core
 npm start
 ```
-
+8- Start X automatically on boot and the -nocursor option tells X to not display any mouse cursor at all
+```bash
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx -- -nocursor
+```
 
 ### Website
 https://talaos.walidamriou.com
