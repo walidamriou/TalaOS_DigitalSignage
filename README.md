@@ -54,6 +54,21 @@ npm start
 ```bash
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx -- -nocursor
 ```
+9- Install NodeJs:
+```bash
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install -y nodejs
+node -v
+```
+10- Install ElectronJS
+```bash
+sudo npm install -g electron --unsafe-perm=true --allow-root
+```
+11- Clone TalaOS_DigitalSignage to home
+```bash
+git clone https://github.com/walidamriou/TalaOS_DigitalSignage.git
+```
+12- reboot the board
 
 ### Website
 https://talaos.walidamriou.com
